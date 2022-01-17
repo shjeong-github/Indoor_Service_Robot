@@ -1,0 +1,8 @@
+dynamixel.c:16:6:READ_DATA_Instruct	32	static
+dynamixel.c:25:6:WRITE_DATA_Instruct	56	static
+dynamixel.c:59:6:SYNC_WRITE_Instruct	56	static
+dynamixel.c:102:9:Dynamix_Checksum	24	static
+dynamixel.c:117:6:Dynamix_Dec_WriteHexa	24	static
+dynamixel.c:130:6:Dynamix_WriteHexa	24	static
+dynamixel.c:142:6:Buffer_Data_Set	32	static
+dynamixel.c:149:6:Buffer_Allocate_Divide_Hex	24	static

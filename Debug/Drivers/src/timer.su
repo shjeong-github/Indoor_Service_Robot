@@ -1,0 +1,5 @@
+timer.c:15:6:Timer_Init	40	static
+timer.c:55:6:Alarm_Open	16	static
+timer.c:63:6:Alarm_Close	16	static
+timer.c:72:6:TIM3_IRQHandler	16	static
+timer.c:102:6:Error_Timer_Handler	4	static,ignoring_inline_asm

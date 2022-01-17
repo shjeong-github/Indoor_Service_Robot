@@ -1,0 +1,2 @@
+system_config.c:13:6:System_Clock_Config	72	static
+system_config.c:49:6:Error_System_Handler	4	static,ignoring_inline_asm

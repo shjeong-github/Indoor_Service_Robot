@@ -1,0 +1,10 @@
+qep.c:27:6:QEP_Read	4	static
+qep.c:35:6:QEP_Reset	4	static,ignoring_inline_asm
+qep.c:48:9:QEP_Get	4	static
+qep.c:54:6:QEP_Init	56	static
+qep.c:108:13:QEP_GPIO_Init	32	static
+qep.c:127:13:QEP_GPIO_DeInit	8	static
+qep.c:142:6:Encoder_value_Set	16	static
+qep.c:153:10:Encoder_angular_velocity	24	static
+qep.c:170:10:Encoder_speed	24	static
+qep.c:189:6:Error_qep_Handler	4	static,ignoring_inline_asm
