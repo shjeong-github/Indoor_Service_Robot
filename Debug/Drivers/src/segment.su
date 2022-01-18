@@ -1,0 +1,6 @@
+segment.c:29:6:Segment_Init	48	static
+segment.c:62:6:Segment_On	24	static
+segment.c:82:10:Segment_Get_Value	4	static
+segment.c:88:6:Segment_Set_Value	16	static
+segment.c:94:6:Segment_Power_ON	8	static
+segment.c:126:6:Segment_Power_OFF	8	static

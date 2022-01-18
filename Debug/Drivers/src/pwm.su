@@ -1,0 +1,11 @@
+pwm.c:22:6:PWM_Init	128	static
+pwm.c:147:6:PWM_Open	24	static
+pwm.c:185:6:PWM_Close	16	static
+pwm.c:219:13:PWM_GPIO_Init	72	static
+pwm.c:255:6:PWM_Duty_Set	24	static
+pwm.c:299:7:Speed_duty_cal	16	static
+pwm.c:304:6:Angle_Value_Set	24	static
+pwm.c:317:7:Angle_duty_cal	16	static
+pwm.c:326:10:Duty_calculate	16	static
+pwm.c:333:6:DIR_Change	16	static
+pwm.c:344:6:Error_PWM_Handler	4	static,ignoring_inline_asm
