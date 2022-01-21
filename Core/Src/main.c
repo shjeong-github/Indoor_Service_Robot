@@ -147,7 +147,7 @@ int main(void)
   //Alarm_Open(ALARM2,5,QEP_Read);
   Alarm_Open(ALARM3,1000,Encoder_Data_Send_Segment);
   // Alarm_Open(ALARM4,500,Counter);
-  Alarm_Open(ALARM6,SERIAL_BUFFER_SIZE,Serial_Packet);
+  //Alarm_Open(ALARM6,SERIAL_BUFFER_SIZE,Serial_Packet);
   Alarm_Open(ALARM5,100,GPS_Serial_Packet );
  //Alarm_Open(ALARM6,1000,GPS_Serial_Send );
   //Alarm_Open(ALARM6,SERIAL_BUFFER_SIZE,test_dynamix);
@@ -161,6 +161,8 @@ int main(void)
 
   //PWM angle test2
   //float i=5.5;
+  uint8_t id =0x0F , param_address =0x1E , param1 =0x200, param2 = 0x200;
+  uint16_t param3=0x200, param4=0x200;
   while (1)
   {
 	 //Segment_Powerset();
@@ -193,6 +195,28 @@ int main(void)
 	  {i=5.5;
 	  }*/
 
+
+
+	 //id=Rx1_Array[0];
+	 //param_address=Rx1_Array[1];
+	 //param1=Rx1_Array[2];
+	 //param2=Rx1_Array[3];
+	 //param3 = 0x0200;
+	 //param4 = 0x0200;
+	 //READ_DATA_Instruct(&dynamix_buffer, id,param_address,param1);
+	 param3=0x200;
+	 param4=0x200;
+	 WRITE_DATA_Instruct(&dynamix_buffer,id,param_address,param3,param4);
+	 //SYNC_WRITE_Instruct(&dynamix_buffer,0x1E,0x00,0x010,0x150,0x01,0x220,0x360,0x02,0x030,0x170,0x03,0x220,0x380);
+	 Serial_Send(0,&dynamix_buffer,11);
+	 Serial_Send(1,&dynamix_buffer,11);
+	 HAL_Delay(3000);
+	 param3=0x20;
+	 param4=0x200;
+	 WRITE_DATA_Instruct(&dynamix_buffer,id,param_address,param3,param4);
+	 Serial_Send(0,&dynamix_buffer,11);
+	 Serial_Send(1,&dynamix_buffer,11);
+	 HAL_Delay(3000);
   }
   /* USER CODE END 3 */
   return 0;
@@ -491,8 +515,8 @@ void GPS_Serial_Send(void)
 
 void test_dynamix(void)
 {
-	//uint8_t id =0x00 , param_address =0x00 , param1 =0x00, param2 = 0x00;
-	//uint16_t param3=0, param4=0;
+	uint8_t id =0x0F , param_address =0x1E , param1 =0x20, param2 = 0x20;
+	uint16_t param3=0x20, param4=0x20;
 	//id=Rx1_Array[0];
 	//param_address=Rx1_Array[1];
 	//param1=Rx1_Array[2];
@@ -500,10 +524,12 @@ void test_dynamix(void)
 	//param3 = 0x0200;
 	//param4 = 0x0200;
 	//READ_DATA_Instruct(&dynamix_buffer, id,param_address,param1);
-	//WRITE_DATA_Instruct(&dynamix_buffer,id,param_address,param3,param4);
-	SYNC_WRITE_Instruct(&dynamix_buffer,0x1E,0x00,0x010,0x150,0x01,0x220,0x360,0x02,0x030,0x170,0x03,0x220,0x380);
-	Serial_Send(0, &dynamix_buffer,28);
-	Serial_Send(1,Rx1_Array,28);
+	WRITE_DATA_Instruct(&dynamix_buffer,id,param_address,param3,param4);
+	//SYNC_WRITE_Instruct(&dynamix_buffer,0x1E,0x00,0x010,0x150,0x01,0x220,0x360,0x02,0x030,0x170,0x03,0x220,0x380);
+	Serial_Send(0,&dynamix_buffer,11);
+	Serial_Send(1,&dynamix_buffer,11);
+
+
 	/*if( (Rx1_Array[0] != 0) &&(serial_flag ==0))
 	{
 		for(uint8_t i = 0; i<13;i++ )
