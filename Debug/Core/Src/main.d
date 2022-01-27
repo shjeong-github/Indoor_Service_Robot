@@ -27,7 +27,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/inc/system_config.h ../Drivers/inc/timer.h \
  ../Drivers/inc/segment.h ../Drivers/inc/qep.h ../Drivers/inc/led.h \
  ../Drivers/inc/pwm.h ../Drivers/inc/qep.h ../Drivers/inc/segment.h \
- ../Drivers/inc/serial.h ../Core/Inc/stm32f1xx_it.h ../Drivers/inc/gps.h \
+ ../Drivers/inc/serial.h ../Core/Inc/stm32f1xx_it.h \
+ ../Drivers/inc/serial_halfduflex.h ../Drivers/inc/gps.h \
  ../Drivers/inc/dynamixel.h
 
 ../Core/Inc/main.h:
@@ -101,6 +102,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/inc/serial.h:
 
 ../Core/Inc/stm32f1xx_it.h:
+
+../Drivers/inc/serial_halfduflex.h:
 
 ../Drivers/inc/gps.h:
 

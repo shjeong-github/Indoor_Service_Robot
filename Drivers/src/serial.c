@@ -10,7 +10,7 @@
 
 static void USART2_GPIO_Init(void);
 static void USART3_GPIO_Init(void);
-
+static void USART3_HALF_DUFLEX_GPIO_Init(void);
 
 uint8_t Rx1_buffer;
 uint8_t Rx2_buffer;
@@ -64,6 +64,9 @@ void Serial2_Init(void)
 }
 
 
+
+
+
 void Serial_Open(SERIAL_PORT Port, uint32_t Baudrate, SERIAL_CALLBACK Callback)  //SERIAL_CALLBACK Callback
 {
 	// 시리얼 포트 확인
@@ -94,6 +97,7 @@ void Serial_Open(SERIAL_PORT Port, uint32_t Baudrate, SERIAL_CALLBACK Callback) 
 		HAL_UART_Receive_IT(&huart3, &Rx2_buffer, 1);
 	}
 
+
 	SerialCallbackTable[Port] = Callback;
 }
 
@@ -108,6 +112,8 @@ void Serial_Close(SERIAL_PORT Port)
 		case SERIAL_PORT2 :
 			HAL_NVIC_DisableIRQ(USART3_IRQn);
 			break;
+		/*case SERIAL_PORT3 :
+			HAL_NVIC_DisableIRQ(USART3_IRQn);*/
 		default :
 			break;
 	}
@@ -302,6 +308,7 @@ static void USART3_GPIO_Init(void)
 
 
 }
+
 
 
 

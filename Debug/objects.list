@@ -26,5 +26,6 @@
 "Drivers/src/qep.o"
 "Drivers/src/segment.o"
 "Drivers/src/serial.o"
+"Drivers/src/serial_halfduflex.o"
 "Drivers/src/system_config.o"
 "Drivers/src/timer.o"

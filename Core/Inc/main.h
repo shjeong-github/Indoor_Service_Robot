@@ -49,6 +49,7 @@ extern "C" {
 #include "qep.h"
 #include "segment.h"
 #include "serial.h"
+#include "serial_halfduflex.h"
 #include "gps.h"
 #include "dynamixel.h"
 /* USER CODE END ET */

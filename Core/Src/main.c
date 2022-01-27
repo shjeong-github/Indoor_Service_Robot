@@ -161,7 +161,8 @@ int main(void)
 
   //PWM angle test2
   //float i=5.5;
-  uint8_t id =0x0F , param_address =0x1E , param1 =0x200, param2 = 0x200;
+  uint8_t id =0x03 , param_address =0x1E;
+  uint16_t param1 =0x200, param2 = 0x200;
   uint16_t param3=0x200, param4=0x200;
   while (1)
   {

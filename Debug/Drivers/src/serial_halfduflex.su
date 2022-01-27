@@ -1,0 +1,5 @@
+serial_halfduflex.c:15:6:Serial_HalfDuflex_Init	8	static
+serial_halfduflex.c:35:6:Serial_HalfDulex_Open	24	static
+serial_halfduflex.c:54:6:Serial_HalfDuflex_Close	16	static
+serial_halfduflex.c:73:13:USART3_HALF_DUFLEX_GPIO_Init	32	static
+serial_halfduflex.c:87:6:Error_Serial_HALF_DUFLEX_Handler	4	static,ignoring_inline_asm

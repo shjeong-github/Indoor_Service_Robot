@@ -1,8 +1,5 @@
-Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c ../Core/Inc/main.h \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
- ../Core/Inc/stm32f1xx_hal_conf.h \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
+Drivers/src/serial_halfduflex.o: ../Drivers/src/serial_halfduflex.c \
+ ../Drivers/inc/serial_halfduflex.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
  ../Drivers/CMSIS/Include/core_cm3.h \
@@ -10,6 +7,10 @@ Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c ../Core/Inc/main.h \
  ../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+ ../Core/Inc/stm32f1xx_hal_conf.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
@@ -24,22 +25,9 @@ Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Drivers/inc/system_config.h ../Drivers/inc/timer.h \
- ../Drivers/inc/segment.h ../Drivers/inc/qep.h ../Drivers/inc/led.h \
- ../Drivers/inc/pwm.h ../Drivers/inc/qep.h ../Drivers/inc/segment.h \
- ../Drivers/inc/serial.h ../Core/Inc/stm32f1xx_it.h \
- ../Drivers/inc/serial_halfduflex.h ../Drivers/inc/gps.h \
- ../Drivers/inc/dynamixel.h
+ ../Core/Inc/stm32f1xx_it.h
 
-../Core/Inc/main.h:
-
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
-
-../Core/Inc/stm32f1xx_hal_conf.h:
-
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
-
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:
+../Drivers/inc/serial_halfduflex.h:
 
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
 
@@ -54,6 +42,14 @@ Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c ../Core/Inc/main.h \
 ../Drivers/CMSIS/Include/cmsis_gcc.h:
 
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h:
+
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
+
+../Core/Inc/stm32f1xx_hal_conf.h:
+
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
+
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 
@@ -83,28 +79,4 @@ Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c ../Core/Inc/main.h \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 
-../Drivers/inc/system_config.h:
-
-../Drivers/inc/timer.h:
-
-../Drivers/inc/segment.h:
-
-../Drivers/inc/qep.h:
-
-../Drivers/inc/led.h:
-
-../Drivers/inc/pwm.h:
-
-../Drivers/inc/qep.h:
-
-../Drivers/inc/segment.h:
-
-../Drivers/inc/serial.h:
-
 ../Core/Inc/stm32f1xx_it.h:
-
-../Drivers/inc/serial_halfduflex.h:
-
-../Drivers/inc/gps.h:
-
-../Drivers/inc/dynamixel.h:
