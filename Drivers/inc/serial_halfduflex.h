@@ -54,14 +54,15 @@
  typedef void (*SERIAL_HALFDUFLEX_CALLBACK)(void);
 
 
- void Serial_HalfDuflex_Init(void);
- // 시리얼 에러 헨들러
- void Error_Serial_HALF_DUFLEX_Handler(void);
+void Serial_HalfDuflex_Init(void);
+// 시리얼 에러 헨들러
+void Error_Serial_HALF_DUFLEX_Handler(void);
 
 
- void Serial_HalfDulex_Open(SERIAL_HALFDUFLEX_PORT Port, uint32_t Baudrate, SERIAL_HALFDUFLEX_CALLBACK Callback);
- void Serial_HalfDuflex_Close(SERIAL_HALFDUFLEX_PORT Port);
-
+void Serial_HalfDuflex_Open(SERIAL_HALFDUFLEX_PORT Port, uint32_t Baudrate, SERIAL_HALFDUFLEX_CALLBACK Callback);
+void Serial_HalfDuflex_Close(SERIAL_HALFDUFLEX_PORT Port);
+void HalfDuflex_serial(void);
+void HalfDuflex_serial_dynamixel(void);
 
 
 

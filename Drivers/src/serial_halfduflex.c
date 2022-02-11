@@ -32,7 +32,7 @@ void Serial_HalfDuflex_Init(void)
 
 }
 
-void Serial_HalfDulex_Open(SERIAL_HALFDUFLEX_PORT Port, uint32_t Baudrate, SERIAL_HALFDUFLEX_CALLBACK Callback)
+void Serial_HalfDuflex_Open(SERIAL_HALFDUFLEX_PORT Port, uint32_t Baudrate, SERIAL_HALFDUFLEX_CALLBACK Callback)
 {
 	// 시리얼 포트 확인
 
@@ -67,9 +67,6 @@ void Serial_HalfDuflex_Close(SERIAL_HALFDUFLEX_PORT Port)
 }
 
 
-
-
-
 static void USART3_HALF_DUFLEX_GPIO_Init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct_HD ={0};
@@ -83,6 +80,18 @@ static void USART3_HALF_DUFLEX_GPIO_Init(void)
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 void Error_Serial_HALF_DUFLEX_Handler(void)
 {

@@ -93,6 +93,8 @@ void test_callback(void);
 void test_dynamix(void);
 //GPS 데이터 확인 함수
 void GPS_Serial_Send(void);
+//다이나믹셀 Halfduflex 통신
+void Dynamixel_HalfDuflex_serial(void);
 /* USER CODE END 0 */
 
 /**
@@ -541,6 +543,24 @@ void test_dynamix(void)
 		HAL_HalfDuplex_EnableReceiver(&huart3);
 		serial_flag = 2;
 	}*/
+}
+
+
+void Dynamixel_HalfDuflex_serial(void)
+{
+	uint8_t hd_rx_return_buffer[8]={0,};
+	uint8_t moter1_id = 0x03;
+	uint8_t param_address=0; // 설정
+	uint8_t moter1_param1=0; // 설정
+	uint8_t read_data_lengs =0; // 설정
+	HAL_HalfDuplex_EnableTransmitter(&huart3);
+	READ_DATA_Instruct(&dynamix_buffer, moter1_id, param_address,read_data_lengs );
+	HAL_UART_Transmit(&huart3, dynamix_buffer,7,100);
+	HAL_HalfDuplex_EnableReceiver(&huart3);
+	HAL_UART_Receive(&huart3, hd_rx_return_buffer, 8, 1000);
+
+
+
 }
 
 

@@ -15,7 +15,7 @@
 #include "stm32f1xx.h"
 #include <stdlib.h>
 
- void READ_DATA_Instruct(uint8_t *packet_buffer,uint8_t id, uint8_t param_address ,uint8_t param1);
+ void READ_DATA_Instruct(uint8_t *packet_buffer,uint8_t id, uint8_t param_address ,uint8_t read_lengs);
  void WRITE_DATA_Instruct(uint8_t *packet_buffer, uint8_t id, uint8_t param_address ,uint16_t param1, uint16_t param2 );
  void SYNC_WRITE_Instruct(uint8_t *packet_buffer, uint8_t param_address,
 			uint8_t id1, uint16_t param1_position, uint16_t param1_speed,

@@ -13,10 +13,10 @@ uint8_t dynamix_instruction[8]= {0x01,0x02,0x03,0x04,0x05,0x06,0x83,0x92};
 uint8_t dynamix_id =0;
 const uint8_t *HexaString_DEC = "0123456789ABCDEF";
 
-void READ_DATA_Instruct(uint8_t *packet_buffer,uint8_t id, uint8_t param_address ,uint8_t param1)
+void READ_DATA_Instruct(uint8_t *packet_buffer,uint8_t id, uint8_t param_address ,uint8_t read_lengs)
 {
 
-	uint8_t instruction_packet[8] = {0xFF,0xFF,id ,0x04, 0x02,param_address,param1,0x00};
+	uint8_t instruction_packet[8] = {0xFF,0xFF,id ,0x04, 0x02,param_address,read_lengs,0x00};
 	uint8_t size= sizeof(instruction_packet);
 	instruction_packet[7] = Dynamix_Checksum(instruction_packet,size);
 	Buffer_Data_Set(packet_buffer,instruction_packet,size);
